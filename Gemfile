@@ -49,3 +49,5 @@ gem "devise"
 
 gem "devise-jwt"
 
+
+gem "byebug", "~> 11.1"
