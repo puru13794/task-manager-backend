@@ -1,35 +1,20 @@
-# README
-
-# POSTGRES LOCAL SETUP
 
 
-Installing and creating a user in postgres
-
-sudo -u postgres createuser -s taskmanager -P
->> enter `taskmanager` twice for password
+## Deployment
 
 
-sudo apt install postgresql postgresql-contrib libpq-dev
+Deployed in Render: <https://task-manager-backend-s40k.onrender.com>
+Get Postman collection for testing api's : <https://web.postman.co/workspace/My-Workspace~a65b135e-32a1-44ec-8ab3-e4b517e79588/overview>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Local Setup 
 
-Things you may want to cover:
+Clone the Repo `git clone git@github.com:puru13794/task-manager-backend.git`
+install Postgres in already not installed:
 
-* Ruby version
+* change `username` and `password` in `config/database.yml` file to system_name and system passwords for less headache, or create a new user passwords and grant privilages more here: <https://www.digitalocean.com/community/tutorials/how-to-set-up-ruby-on-rails-with-postgres>
 
-* System dependencies
+* run `rails db:create`
 
-* Configuration
+* run `rails db:migrate` and `rails s` should be done with localsetup
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
