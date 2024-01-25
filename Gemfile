@@ -54,4 +54,4 @@ gem "byebug", "~> 11.1"
 
 gem "dry-configurable", "~> 1.1"
 
-# gem "sprockets-rails", "~> 3.4"
+gem "sprockets-rails", "~> 3.4"
