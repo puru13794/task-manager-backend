@@ -22,7 +22,7 @@ class TasksController < ApplicationController
 	end
 
 	def update
-		byebug
+		# byebug
 		@task = current_user.tasks.find(params[:id])
 		return render json: {code: 422, errors: ["No task exists with id: #{params[:id]} for this user"]}, status: :unprocessable_entity unless @task 
 		if @task.update(task_params)
