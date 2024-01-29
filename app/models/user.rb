@@ -11,6 +11,6 @@ class User < ApplicationRecord
   end
 
   def revoke_session
-    self.update(jti: " ")
+    self.update(jti: SecureRandom.uuid)
   end
 end
