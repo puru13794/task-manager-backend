@@ -20,3 +20,9 @@ install Postgres if already not installed: <https://gorails.com/setup/ubuntu/22.
 * run `rails db:migrate` and `rails s` should be done with localsetup
 
 
+
+## Dev commands
+
+* `rails c` and `user = User.find(<id>); user.revoke_session` for revoking users session time at any point of time
+
+

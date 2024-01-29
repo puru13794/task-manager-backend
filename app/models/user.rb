@@ -9,4 +9,8 @@ class User < ApplicationRecord
   def jwt_payload
     super
   end
+
+  def revoke_session
+    self.update(jti: " ")
+  end
 end
