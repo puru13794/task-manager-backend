@@ -5,6 +5,7 @@ class TasksController < ApplicationController
 	def index
 		# byebug
 		@tasks = current_user.tasks
+		@tasks = @tasks.where(status: params[:filter]) unless params[:filter] == "all"
 		render json: {code: 200, data: @tasks}, status: :ok
 	end
 
@@ -15,6 +16,7 @@ class TasksController < ApplicationController
 		    render json: { code: 402, error: 'Complete existing "TO DO" tasks to create new tasks' }, status: :unprocessable_entity
 		    return
 		elsif @task.save
+		# if @task.save
 			render json: {code: 200, data: @task}, status: :ok
 		else
 			render json: {code: 402, error: @task.errors.full_messages }, status: :unprocessable_entity

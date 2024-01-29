@@ -55,3 +55,8 @@ gem "byebug", "~> 11.1"
 gem "dry-configurable", "~> 1.1"
 
 gem "sprockets-rails", "~> 3.4"
+
+group :test, :development do
+  gem 'rspec-rails', '~> 5.0'
+  gem 'factory_bot_rails'
+end
